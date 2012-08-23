@@ -10,3 +10,32 @@ body {
     padding: 0;
 }
 
+
+/* MainPage's Index'
+----------------------------------------------------------*/
+.Top
+{
+	height: 82px;
+	background-image: url("../../Images/top_1.jpg");
+}
+.Content
+{
+	height: 550px;
+}
+.Left
+{
+	width: 250px;
+	height: 520px;
+	float: left;
+}
+.Right
+{
+	height: 100%;
+	float: left;
+}
+.Bottom
+{
+	height: 27px;
+	background-image: url("../../Images/main_06.gif");
+    text-align: center;	
+}
