@@ -178,6 +178,42 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Scripts\treeview\.gitignore" />
+    <Content Include="Scripts\treeview\changelog.txt" />
+    <Content Include="Scripts\treeview\demo\async.html" />
+    <Content Include="Scripts\treeview\demo\bg.gif" />
+    <Content Include="Scripts\treeview\demo\demo.js" />
+    <Content Include="Scripts\treeview\demo\edit.html" />
+    <Content Include="Scripts\treeview\demo\images.html" />
+    <Content Include="Scripts\treeview\demo\index.html" />
+    <Content Include="Scripts\treeview\demo\large.html" />
+    <Content Include="Scripts\treeview\demo\prerendered.html" />
+    <Content Include="Scripts\treeview\demo\screen.css" />
+    <Content Include="Scripts\treeview\demo\simple.html" />
+    <Content Include="Scripts\treeview\demo\sortable.html" />
+    <Content Include="Scripts\treeview\images\ajax-loader.gif" />
+    <Content Include="Scripts\treeview\images\file.gif" />
+    <Content Include="Scripts\treeview\images\folder-closed.gif" />
+    <Content Include="Scripts\treeview\images\folder.gif" />
+    <Content Include="Scripts\treeview\images\minus.gif" />
+    <Content Include="Scripts\treeview\images\plus.gif" />
+    <Content Include="Scripts\treeview\images\treeview-black-line.gif" />
+    <Content Include="Scripts\treeview\images\treeview-black.gif" />
+    <Content Include="Scripts\treeview\images\treeview-default-line.gif" />
+    <Content Include="Scripts\treeview\images\treeview-default.gif" />
+    <Content Include="Scripts\treeview\images\treeview-famfamfam-line.gif" />
+    <Content Include="Scripts\treeview\images\treeview-famfamfam.gif" />
+    <Content Include="Scripts\treeview\images\treeview-gray-line.gif" />
+    <Content Include="Scripts\treeview\images\treeview-gray.gif" />
+    <Content Include="Scripts\treeview\images\treeview-red-line.gif" />
+    <Content Include="Scripts\treeview\images\treeview-red.gif" />
+    <Content Include="Scripts\treeview\jquery.treeview.async.js" />
+    <Content Include="Scripts\treeview\jquery.treeview.css" />
+    <Content Include="Scripts\treeview\jquery.treeview.edit.js" />
+    <Content Include="Scripts\treeview\jquery.treeview.js" />
+    <Content Include="Scripts\treeview\jquery.treeview.sortable.js" />
+    <Content Include="Scripts\treeview\lib\jquery.cookie.js" />
+    <Content Include="Scripts\treeview\lib\jquery.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -209,7 +245,13 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Scripts\treeview\.project" />
+    <None Include="Scripts\treeview\demo\source.php" />
+    <None Include="Scripts\treeview\demo\source.phps" />
+    <None Include="Scripts\treeview\README.md" />
+    <None Include="Scripts\treeview\todo" />
     <None Include="Views\MainPage\Index.cshtml" />
+    <None Include="Views\MainPage\LeftMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
