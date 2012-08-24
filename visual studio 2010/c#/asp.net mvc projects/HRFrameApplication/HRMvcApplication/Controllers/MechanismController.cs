@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
+using HRMvcApplication.Models;
+using Model;
+using MvcContrib.UI.Grid;
 
 namespace HRMvcApplication.Controllers
 {
@@ -28,8 +28,5 @@ namespace HRMvcApplication.Controllers
 
             return View(pagedViewModel);
         }
-
-        }
-
     }
 }
