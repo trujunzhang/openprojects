@@ -261,8 +261,10 @@
     <None Include="Scripts\treeview\todo" />
     <None Include="Views\MainPage\Index.cshtml" />
     <None Include="Views\MainPage\LeftMenu.cshtml" />
+    <None Include="Views\Mechanism\ContractViewer.cshtml" />
     <None Include="Views\Mechanism\Details.cshtml" />
     <None Include="Views\Mechanism\List.cshtml" />
+    <None Include="Views\Mechanism\ModelViewer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

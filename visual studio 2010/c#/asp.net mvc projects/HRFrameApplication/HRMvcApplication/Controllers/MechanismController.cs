@@ -72,6 +72,19 @@ namespace HRMvcApplication.Controllers
             return View(viewModel);
         }
 
+        [HttpPost]
+        public ViewResult ModelViewer(C_Mechanism model)
+        {
+            model.传真 = "wanghao";
+            return View(model);
+//            return View(new BLL.C_Mechanism().GetModel(28));
+        }
+
+        public ViewResult ContractViewer()
+        {
+            return View();
+        }
+
         #endregion
     }
 }
