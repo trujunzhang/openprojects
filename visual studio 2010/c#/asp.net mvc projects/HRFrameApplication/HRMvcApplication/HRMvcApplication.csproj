@@ -75,6 +75,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\MechanismDetailModel.cs" />
     <Compile Include="Models\PagedViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -260,6 +261,7 @@
     <None Include="Scripts\treeview\todo" />
     <None Include="Views\MainPage\Index.cshtml" />
     <None Include="Views\MainPage\LeftMenu.cshtml" />
+    <None Include="Views\Mechanism\Details.cshtml" />
     <None Include="Views\Mechanism\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
