@@ -35,7 +35,7 @@
             title: "添加联系人",
             beforeclose: function(event, ui) {
                 //getWeather();
-                //$("form").submit();
+                $("form").submit();
                 //$(this).kill();
                 //$("form").empty();
                 // $("form").load("/Mechanism/MechanismContract");
@@ -63,12 +63,13 @@
     }
 </script>
 
+
        
 @using (Html.BeginForm("ContractViewer", "Mechanism"))
 {
     <fieldset >
         <legend>管理联系人</legend>
-
+        @Html.HiddenFor(model => model.SelectedMechanismid)
         <div class="editor-field" style="background-color: orchid; height: 200px; width: 100%;">
             @Html.ListBoxFor(model => model.RequestedProducts, Model.RequestedSelectList, new {id = "contactlist"})                                                        
         </div>

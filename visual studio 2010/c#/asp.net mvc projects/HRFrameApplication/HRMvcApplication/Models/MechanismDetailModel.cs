@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Web.Mvc;
 using Model;
@@ -18,21 +19,24 @@ namespace HRMvcApplication.Models
         public MechanismDetailModel(C_Mechanism cMechanism)
         {
             SelectedModel = cMechanism;
-            SelectedMechanismid = (int)SelectedModel.MECHANISMID;
+            SelectedMechanismid = (int) SelectedModel.MECHANISMID;
+        }
+
+        public MechanismDetailModel()
+        {
         }
 
         #endregion
 
         #region listbox models
- 
-        public MultiSelectList AvailableSelectList;//未选负责人
-        public MultiSelectList RequestedSelectList;//已选负责人
-		
-        public List<int> AvailableProducts { get; set; }//未选负责人
-        public List<int> RequestedProducts { get; set; }//已选负责人
-   
+
+        public MultiSelectList AvailableSelectList; //未选负责人
+        public MultiSelectList RequestedSelectList; //已选负责人
         private int _selectedMechanismid;
-   
+
+        public List<int> AvailableProducts { get; set; } //未选负责人
+        public List<int> RequestedProducts { get; set; } //已选负责人
+
         public int SelectedMechanismid
         {
             get { return _selectedMechanismid; }
@@ -48,6 +52,8 @@ namespace HRMvcApplication.Models
         {
             string wheresql = string.Format("MECHANISMID={0}", SelectedMechanismid);
             List<PersonInChargeView> modelList = new BLL.PersonInChargeView().GetList(wheresql);
+            PersonInChargeView first = modelList[0];
+            first.姓名 = "wangho" + DateTime.Now.ToString();
             return new MultiSelectList(modelList, "PERSONINCHARGEID", "姓名", selectedvalues);
         }
 
@@ -59,7 +65,7 @@ namespace HRMvcApplication.Models
 
             return new MultiSelectList(modelList, "POSITIONID", "姓名", selectedvalues);
         }
-		
+
         private List<PersonInPositionView> GetPersonInPosition()
         {
             //List<PersonInPositionView> modelList;
