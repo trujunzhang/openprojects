@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 
-namespace HRFrameApplication.Common
+namespace HRMvcApplication.Common
 {
     public static class QueryExtention
     {

@@ -4,7 +4,7 @@ using System.Web.Mvc.Html;
 using System.Web.Routing;
 using System.Collections.Specialized;
 
-namespace HRFrameApplication.Common
+namespace HRMvcApplication.Common
 {
     public static class HtmlExtensions
     {
