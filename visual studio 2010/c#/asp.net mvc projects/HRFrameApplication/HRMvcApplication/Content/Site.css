@@ -39,3 +39,207 @@ body {
 	background-image: url("../../Images/main_06.gif");
     text-align: center;	
 }
+
+
+/********************************************
+   AUTHOR:  			Erwin Aligam 
+   WEBSITE:   			http://www.styleshout.com/
+	TEMPLATE NAME:		Envision
+   TEMPLATE CODE: 	S-0013
+   VERSION:          1.1
+	LAST MODIFIED     Nov-14-2007 	
+ *******************************************/
+ 
+/********************************************
+   HTML ELEMENTS
+********************************************/ 
+
+/* links */
+a, a:visited {
+	text-decoration: none;
+	color: #2180BC;
+
+}
+a:hover {
+	color: #88ac0b;
+	text-decoration: underline;
+}
+
+/* start - table */
+table {
+	border-collapse: collapse;
+	margin: 10px;	
+}
+th strong {
+	color: #fff;
+}
+th {
+	background: #FFFFFF;
+	height: 29px;
+	padding-left: 12px;
+	padding-right: 12px;
+	color: #FFF;
+	text-align: left;
+	border-left: 1px solid #B6D59A;
+	border-bottom: solid 2px #FFF;
+}
+tr {
+	height: 30px;
+}
+td {
+	padding-left: 11px;
+	padding-right: 11px;
+	border-left: 1px solid #FFF;
+	border-bottom: solid 1px #ffffff;
+}
+td.header{
+	background: #A9D542;
+	font-weight: bold;	
+}
+td.content{
+	background: #EDFDCE;
+}
+td.first,th.first {
+	border-left: 0px;
+}
+tr.row-a {
+	background: #F8F8F8;
+}
+tr.row-b {
+	background: #EFEFEF;
+}
+/* end - table */
+
+/* form elements */
+form {
+	margin:10px; padding: 0 5px;
+	border: 1px solid #f2f2f2; 
+	background-color: #FAFAFA; 	
+}
+label {
+	display:block;
+	font-weight:bold;
+	margin:5px 0;
+}
+input {
+	padding:2px;
+	border:1px solid #eee;
+	font: normal 1em Verdana, sans-serif;
+	color:#777;
+}
+select 
+{
+    padding:2px;
+	font: normal 1em Verdana, sans-serif;    
+}
+textarea {
+	width:400px;
+	padding:2px;
+	font: normal 1em Verdana, sans-serif;
+	border:1px solid #eee;
+	height:100px;
+	display:block;
+	color:#777;
+}
+input.button { 
+	font: bold 12px Arial, Sans-serif; 
+	height: 24px;
+	margin: 0;
+	padding: 2px 3px; 
+	color: #FFF;
+	background: #8EB50C url(images/button-bg.jpg) repeat-x 0 0;
+	border: none;
+}
+
+/* search form */
+.searchform {
+	background-color: transparent;
+	border: none;	
+	margin: 0; padding: 5px 0 15px 0;	
+	width: 190px;	
+}
+.searchform p { margin: 0; padding: 0; }
+.searchform input.textbox { 
+	width: 120px;
+	color: #777; 
+	height: 18px;
+	padding: 2px;	
+	border: 1px solid #E5E5E5;
+	vertical-align: top;
+}
+.searchform input.button { 
+	width: 60px;
+	height: 24px;
+	padding: 2px 5px;
+	vertical-align: top;
+}
+
+/* gridpanel Column */
+#gridpanel {
+	width: 100%;
+	padding: 0; margin: 5px 0 0 5px;
+	display: inline;
+}
+#gridpanel h2 {
+	margin-top: 10px;
+	font: Bold 140% 'Trebuchet MS', Tahoma, Sans-serif;
+	color: #88ac0b; 
+	padding: 5px 0 5px 25px; 	
+	border-bottom: 1px solid #EFF0F1;
+	background: #FFF url(images/square-green.png) no-repeat 3px 50%;	
+	text-transform: none;
+}
+#gridpanel h2 a {
+	background: none;
+	color: #88ac0b;
+	text-decoration: none;
+}
+
+#gridpanel ul li {
+	list-style-image: url(images/bullet.gif);
+}
+
+/********************************************
+   MvcContrib Grid Style
+********************************************/ 
+
+.grid-style th
+{
+    border-bottom: 5px solid #8EB50C;
+    background-color: #EDFDCE;
+}
+
+.grid-style .sort_asc
+{
+    background-image: url('images/arrow_down.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 20px;
+}
+
+.grid-style .sort_desc
+{
+    background-image: url('images/arrow_up.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 20px;   
+}
+
+.grid-style .gridrow_alternate
+{
+    background-color: #eee;
+}
+
+.pagination
+{
+    border: 1px solid #8EB50C;
+    padding: 5px;
+    background-color: #EDFDCE;
+    margin: 10px;
+}
+
+/*
+*******************************************************************
+                end gridview
+*******************************************************************
+*/
