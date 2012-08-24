@@ -64,10 +64,12 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainPageController.cs" />
+    <Compile Include="Controllers\MechanismController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\PagedViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -252,6 +254,7 @@
     <None Include="Scripts\treeview\todo" />
     <None Include="Views\MainPage\Index.cshtml" />
     <None Include="Views\MainPage\LeftMenu.cshtml" />
+    <None Include="Views\Mechanism\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
