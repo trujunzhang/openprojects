@@ -10,23 +10,15 @@
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"> </script>
 
 <style type="text/css">
-#contactlist {
-    width: 100%;
-    height: 100%;
-}    
+    #contactlist {
+        height: 100%;
+        width: 100%;
+    }
 </style>
 
 
 <script type="text/javascript">
     $(function() {
-
-        function getWeather() {
-            var URL = "/mechanism/ContractViewer/"; 
-            $.get(URL, function(data) {
-                $("#contractviewer").html(data);
-            });
-        }
-
         $("#NoteDialog").dialog({
             autoOpen: false,
             width: 700,
@@ -34,10 +26,8 @@
             modal: true,
             title: "添加联系人",
             beforeclose: function(event, ui) {
-                //getWeather();
-                $("form").submit();
-                //$(this).kill();
-                //$("form").empty();
+                FreshDiv();
+                //$("form").submit();
                 // $("form").load("/Mechanism/MechanismContract");
             },
             buttons: {
@@ -57,14 +47,21 @@
         });
     });
 
-    function removecontract() {
-        var num = $("#contractlist").select();
-        alert("contract's num" + num);
+    function FreshDiv() {
+
+        $.ajax({
+            url: "/Mechanism/ContractViewer",
+            type:"get",
+            success: function(data) {
+                $("#divcontract").empty();
+                $("#divcontract").html(data);
+            }
+        });
     }
 </script>
 
 
-       
+<div id="divcontract">
 @using (Html.BeginForm("ContractViewer", "Mechanism"))
 {
     <fieldset >
@@ -78,7 +75,7 @@
                 <input type="button"  style="width: 100%;" value="添加" />                                                
             </span>   
             <span >
-                <input type="submit" name="remove" id="remove" style="width: 100%;" value="删除" onclick=" removecontract() "/>                                                
+                <input type="submit" name="remove" id="remove" style="width: 100%;" value="删除" />                                                
             </span>   
             <span >
                 <input type="submit" name="up" id="up" style="width: 100%;" value="上移" />
@@ -91,6 +88,7 @@
 
     </fieldset>
 }
+</div>       
 
 <div id ="NoteDialog">
     

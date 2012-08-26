@@ -80,9 +80,10 @@ namespace HRMvcApplication.Controllers
 //            return View(new BLL.C_Mechanism().GetModel(28));
         }
 
-        public ViewResult ContractViewer(MechanismDetailModel model)
+        public ActionResult ContractViewer()
         {
-            return View(model);
+            MechanismDetailModel model=new MechanismDetailModel(28);
+            return PartialView("ContractViewer",model);
         }
 
         #endregion

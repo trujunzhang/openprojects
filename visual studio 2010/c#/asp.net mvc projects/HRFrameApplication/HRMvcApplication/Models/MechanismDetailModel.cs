@@ -22,6 +22,11 @@ namespace HRMvcApplication.Models
             SelectedMechanismid = (int) SelectedModel.MECHANISMID;
         }
 
+        public MechanismDetailModel(int mechanismid)
+        {
+            SelectedMechanismid = mechanismid;
+        }
+
         public MechanismDetailModel()
         {
         }
