@@ -42,7 +42,7 @@ namespace HRMvcApplication.Controllers
         }
 
         [HttpPost]
-        public ActionResult Details(MechanismDetailModel model, string saveto, string remove, string up, string down)
+        public ActionResult Details(MechanismDetailModel model, string saveto,string add, string remove, string up, string down)
         {
             var viewModel = Session["viewmodel"] as MechanismDetailModel; // used by MechanismModel()
             if (!string.IsNullOrEmpty(saveto)) //model的form事件【保存或更新】
@@ -69,21 +69,8 @@ namespace HRMvcApplication.Controllers
                 //model.SelectedMechanismid = (int) model.SelectedModel.MECHANISMID;
             }
 
+            viewModel=new MechanismDetailModel(28);
             return View(viewModel);
-        }
-
-        [HttpPost]
-        public ViewResult ModelViewer(C_Mechanism model)
-        {
-            model.传真 = "wanghao";
-            return View(model);
-//            return View(new BLL.C_Mechanism().GetModel(28));
-        }
-
-        public ActionResult ContractViewer()
-        {
-            MechanismDetailModel model=new MechanismDetailModel(28);
-            return PartialView("ContractViewer",model);
         }
 
         #endregion

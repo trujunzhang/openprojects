@@ -24,9 +24,7 @@
             modal: true,
             title: "添加联系人",
             beforeclose: function(event, ui) {
-                FreshDiv();
-                //$("form").submit();
-                // $("form").load("/Mechanism/MechanismContract");
+                $("form").submit();
             },
             buttons: {
                 Cancel: function() {
@@ -34,10 +32,10 @@
                 }
             }
         });
-        $("#AddLink").click(function() {
+        $("#add").click(function() {
             //var id = $("#SelectedMechanismid").val();
             //alert("add link");
-//                .load("/Mechanism/AppendPersonInCharge?id=" + id ,           
+            //.load("/Mechanism/AppendPersonInCharge?id=" + id ,           
             $("#NoteDialog").html("")
                 .dialog("option", "closeOnEscape", false)
                 .load("http://www.baidu.com",
@@ -45,52 +43,70 @@
         });
     });
 
-    function FreshDiv() {
-        $.ajax({
-            url: "/Mechanism/ContractViewer",
-            type: "POST",
-            success: function(data) {
-                $("#divcontract").empty();
-                $("#divcontract").html(data);
-            }
-        });
-    }
+
 </script>
-
-
-
-
-
-<div id="modelviewer" style="float: left; height: 100%; width: 50%;">
-    <div style="height: 100%; width: 200px;">
-        <p>wanghao</p>
-    </div>    
-</div>
 
 
 @using (Html.BeginForm())
 {
-    <fieldset >
-        <legend>管理联系人</legend>
-        @Html.HiddenFor(model => model.SelectedMechanismid)
-        <div id="divcontract" style="height: 200px; width: 100%;">
-            @Html.Partial("ContractViewer")
+    <div id="modelviewer" style="float: left; height: 100%; width: 50%;">
+         @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>C_Mechanism</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SelectedModel.机构简称)
         </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SelectedModel.机构简称)
+            @Html.ValidationMessageFor(model => model.SelectedModel.机构简称)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SelectedModel.机构名称)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SelectedModel.机构名称)
+            @Html.ValidationMessageFor(model => model.SelectedModel.机构名称)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SelectedModel.地址)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SelectedModel.地址)
+            @Html.ValidationMessageFor(model => model.SelectedModel.地址)
+        </div>
+
         <p>
-            <span>
-                <input type="button" id="AddLink"  style="width: 100%;" value="添加" />                                                
-            </span>   
-            <span >
-                <input type="submit" name="remove" id="remove" style="width: 100%;" value="删除" />                                                
-            </span>   
-            <span >
-                <input type="submit" name="up" id="up" style="width: 100%;" value="上移" />
-            </span>   
-            <span >
-                <input type="submit" name="down" id="down" style="width: 100%;" value="下移" />                                                                    
-            </span>   
+            <input type="submit" value="Create" />
         </p>
     </fieldset>
+    </div>
+    <div id="contractviewer" style="float: left; height: 100%; width: 50%;">
+        <fieldset >
+            <legend>管理联系人</legend>
+            @Html.HiddenFor(model => model.SelectedMechanismid)
+            <div id="divcontract" style="height: 200px; width: 100%;">
+                @Html.ListBoxFor(model => model.RequestedProducts, Model.RequestedSelectList, new {id = "contactlist"})                                                        
+            </div>
+            <p>
+                <span>
+                    <input type="button" id="add"  style="width: 100%;" value="添加" />                                                
+                </span>   
+                <span >
+                    <input type="submit" name="remove" id="remove" style="width: 100%;" value="删除" />                                                
+                </span>   
+                <span >
+                    <input type="submit" name="up" id="up" style="width: 100%;" value="上移" />
+                </span>   
+                <span >
+                    <input type="submit" name="down" id="down" style="width: 100%;" value="下移" />                                                                    
+                </span>   
+            </p>
+        </fieldset>
+    </div>
 }
+
 	
 <div id ="NoteDialog"/>
