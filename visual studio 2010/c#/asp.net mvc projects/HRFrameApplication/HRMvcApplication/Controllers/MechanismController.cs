@@ -32,20 +32,26 @@ namespace HRMvcApplication.Controllers
 
         #region detail view
 
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
-            //id = 28;
-            var viewModel = new MechanismDetailModel(new BLL.C_Mechanism().GetModel(id));
+            var viewModel = new MechanismDetailModel(-1);
+            viewModel.ModelEventType = "保存";
+            if (id != "new")
+            {
+                viewModel = new MechanismDetailModel(new BLL.C_Mechanism().GetModel(int.Parse(id)));
+                viewModel.ModelEventType = "更新";
+            }
             Session["mechanismid"] = id;
             Session["viewmodel"] = viewModel; // used by MechanismModel()
             return View(viewModel);
         }
 
         [HttpPost]
-        public ActionResult Details(MechanismDetailModel model, string saveto,string add, string remove, string up, string down)
+        public ActionResult Details(MechanismDetailModel model, string create, string add, string remove, string up,
+                                    string down)
         {
             var viewModel = Session["viewmodel"] as MechanismDetailModel; // used by MechanismModel()
-            if (!string.IsNullOrEmpty(saveto)) //model的form事件【保存或更新】
+            if (!string.IsNullOrEmpty(create)) //model的form事件【保存或更新】
             {
                 model.SelectedModel.删除标识 = false;
                 new BLL.C_Mechanism().Update(model.SelectedModel);
@@ -69,7 +75,7 @@ namespace HRMvcApplication.Controllers
                 //model.SelectedMechanismid = (int) model.SelectedModel.MECHANISMID;
             }
 
-            viewModel=new MechanismDetailModel(28);
+            viewModel = new MechanismDetailModel(28);
             return View(viewModel);
         }
 

@@ -98,7 +98,8 @@ namespace DAL
         /// </summary>
         public List<Model.PersonInChargeView> GetList(string wheresql)
         {
-            wheresql = "1=1";
+            // TODO [REMOVE]{1}
+            //wheresql = "1=1";
             StringBuilder sbSql4PersonInChargeView = new StringBuilder(string.Format("SELECT * FROM PersonInChargeView where {0}",wheresql));
             sbSql4PersonInChargeView.Append(string.Format(" and {0}={1}", " É¾³ý±êÊ¶", "0"));
             //sbSql4PersonInChargeView.Append(string.Format(" and {0}={1}", "PERSONID", "11"));

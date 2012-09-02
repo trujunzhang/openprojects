@@ -1,17 +1,17 @@
 ﻿@using HRMvcApplication.Common
-@using MvcContrib.UI.Grid;
+@using MvcContrib.UI.Grid
 @model HRMvcApplication.Models.PagedViewModel<Model.C_Mechanism>
 
 <link href="@Url.Content("~/Content/Site.css?123")" rel="stylesheet" type="text/css" />
 
-
-<h2>List</h2>
-
-
 <div id="gridpanel" >
 
-@Html.Grid(Model.PagedList).AutoGenerateColumns().Columns(column =>{
-    column.For(x => Html.ActionQueryLink(x.机构名称, "Details", new { id = x.MECHANISMID })).Named("编辑").InsertAt(0);
-}).Sort(Model.GridSortOptions).Attributes(@class => "grid-style")
+    @Html.Grid(Model.PagedList).AutoGenerateColumns().Columns(column => { column.For(x => Html.ActionQueryLink(x.机构名称, "Details", new {id = x.MECHANISMID})).Named("编辑").InsertAt(0); }).Sort(Model.GridSortOptions).Attributes(@class => "grid-style")
 
+</div>
+
+<div id="gridevent">
+    <p style="margin-left: 25px;">
+        @Html.ActionLink("新建", "Details",new {id = "new"})    
+    </p>    
 </div>

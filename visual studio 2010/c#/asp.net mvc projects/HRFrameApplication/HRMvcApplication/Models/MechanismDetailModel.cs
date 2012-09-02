@@ -12,6 +12,8 @@ namespace HRMvcApplication.Models
 
         public C_Mechanism SelectedModel { get; set; }
 
+        public string ModelEventType { get; set; }
+
         #endregion
 
         #region constructor
@@ -57,8 +59,12 @@ namespace HRMvcApplication.Models
         {
             string wheresql = string.Format("MECHANISMID={0}", SelectedMechanismid);
             List<PersonInChargeView> modelList = new BLL.PersonInChargeView().GetList(wheresql);
-            PersonInChargeView first = modelList[0];
-            first.姓名 = "wangho" + DateTime.Now.ToString();
+            // TODO [REMOVE]{3}
+            if (modelList.Count > 0)
+            {
+                PersonInChargeView first = modelList[0];
+                first.姓名 = "wangho" + DateTime.Now.ToString();
+            }
             return new MultiSelectList(modelList, "PERSONINCHARGEID", "姓名", selectedvalues);
         }
 

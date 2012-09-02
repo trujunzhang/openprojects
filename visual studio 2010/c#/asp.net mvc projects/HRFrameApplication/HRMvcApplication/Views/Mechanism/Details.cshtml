@@ -43,50 +43,81 @@
         });
     });
 
-
 </script>
 
 
 @using (Html.BeginForm())
 {
     <div id="modelviewer" style="float: left; height: 100%; width: 50%;">
-         @Html.ValidationSummary(true)
-    <fieldset>
-        <legend>C_Mechanism</legend>
+        @Html.ValidationSummary(true)
+        <fieldset>
+            <legend>C_Mechanism</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.SelectedModel.机构简称)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.SelectedModel.机构简称)
-            @Html.ValidationMessageFor(model => model.SelectedModel.机构简称)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.SelectedModel.机构简称)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.SelectedModel.机构简称)
+                @Html.ValidationMessageFor(model => model.SelectedModel.机构简称)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.SelectedModel.机构名称)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.SelectedModel.机构名称)
-            @Html.ValidationMessageFor(model => model.SelectedModel.机构名称)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.SelectedModel.机构名称)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.SelectedModel.机构名称)
+                @Html.ValidationMessageFor(model => model.SelectedModel.机构名称)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.SelectedModel.地址)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.SelectedModel.地址)
-            @Html.ValidationMessageFor(model => model.SelectedModel.地址)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.SelectedModel.电话)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.SelectedModel.电话)
+                @Html.ValidationMessageFor(model => model.SelectedModel.电话)
+            </div>
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.SelectedModel.邮政编码)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.SelectedModel.邮政编码)
+                @Html.ValidationMessageFor(model => model.SelectedModel.邮政编码)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.SelectedModel.网址)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.SelectedModel.网址)
+                @Html.ValidationMessageFor(model => model.SelectedModel.网址)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.SelectedModel.传真)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.SelectedModel.传真)
+                @Html.ValidationMessageFor(model => model.SelectedModel.传真)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.SelectedModel.地址)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.SelectedModel.地址)
+                @Html.ValidationMessageFor(model => model.SelectedModel.地址)
+            </div>
+
+            <p>
+                <input type="submit" id="create" value="create" />
+            </p>
+        </fieldset>
     </div>
+    @Html.HiddenFor(model => model.SelectedMechanismid)
     <div id="contractviewer" style="float: left; height: 100%; width: 50%;">
         <fieldset >
             <legend>管理联系人</legend>
-            @Html.HiddenFor(model => model.SelectedMechanismid)
             <div id="divcontract" style="height: 200px; width: 100%;">
                 @Html.ListBoxFor(model => model.RequestedProducts, Model.RequestedSelectList, new {id = "contactlist"})                                                        
             </div>
