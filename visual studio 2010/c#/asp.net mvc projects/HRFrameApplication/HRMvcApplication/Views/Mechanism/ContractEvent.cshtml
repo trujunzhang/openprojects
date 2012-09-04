@@ -1,0 +1,23 @@
+﻿@model HRMvcApplication.Models.MechanismDetailModel
+
+ @using (Html.BeginForm("ContractEvent","Mechanism"))
+    {
+        @Html.HiddenFor(model => model.SelectedMechanismid)
+        <div id="divcontract" style="height: 200px; width: 100%;">
+            @Html.Partial("ContractViewer")
+        </div>
+        <p>
+            <span>
+                <input type="button" id="AddLink"  style="width: 100%;" value="添加" />                                                
+            </span>   
+            <span >
+                <input type="submit" name="remove" id="remove" style="width: 100%;" value="删除" onclick="removecontract()"/>                                                
+            </span>   
+            <span >
+                <input type="submit" name="up" id="up" style="width: 100%;" value="上移" />
+            </span>   
+            <span >
+                <input type="submit" name="down" id="down" style="width: 100%;" value="下移" />                                                                    
+            </span>   
+        </p>
+    }
