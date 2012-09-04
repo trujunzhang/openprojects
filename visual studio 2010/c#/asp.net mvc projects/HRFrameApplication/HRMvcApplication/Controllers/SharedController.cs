@@ -9,7 +9,7 @@ namespace HRMvcApplication.Controllers
         {
             var mechanismByDepartModel = new MechanismByDepartModel();
             Session["MechanismByDepartment"] = mechanismByDepartModel;
-            return View(mechanismByDepartModel);
+            return PartialView("MechanismByDepartment",mechanismByDepartModel);
         }
 
         [HttpPost]

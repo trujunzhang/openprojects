@@ -81,14 +81,26 @@ namespace HRMvcApplication.Controllers
 
         #endregion
 
-        #region
+        #region CreateContract
 
         public ActionResult CreateContract(string id)
         {
-            var viewModel = new MechanismDetailModel(int.Parse(id));
-            return View(viewModel);
+
+            return PartialView("CreateContract");
         }
 
         #endregion
+
+        #region twolist
+
+        public ActionResult TwoList()
+        {
+            string id = "28";
+            var viewModel = new MechanismDetailModel(int.Parse(id));
+            return PartialView("TwoList",viewModel);
+        }
+ 
+        #endregion
+
     }
 }

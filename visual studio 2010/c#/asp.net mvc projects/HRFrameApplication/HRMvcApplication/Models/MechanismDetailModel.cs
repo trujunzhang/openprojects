@@ -55,6 +55,8 @@ namespace HRMvcApplication.Models
             }
         }
 
+        public string PersonName { get; set; }
+
         private MultiSelectList GetRequestedSelectList(string[] selectedvalues)
         {
             string wheresql = string.Format("MECHANISMID={0}", SelectedMechanismid);

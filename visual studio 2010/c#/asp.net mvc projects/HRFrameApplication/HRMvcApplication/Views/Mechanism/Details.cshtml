@@ -38,7 +38,6 @@
 
             $("#NoteDialog").html("")
                 .dialog("option", "closeOnEscape", false)
-                //.load("http://www.baidu.com",
             .load("/Mechanism/CreateContract?id=" + id ,                               
                     function() { $("#NoteDialog").dialog("open"); });
         });

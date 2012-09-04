@@ -268,6 +268,7 @@
     <None Include="Views\Mechanism\Details.cshtml" />
     <None Include="Views\Mechanism\List.cshtml" />
     <None Include="Views\Mechanism\ModelViewer.cshtml" />
+    <None Include="Views\Mechanism\TwoList.cshtml" />
     <None Include="Views\Shared\MechanismByDepartment.cshtml" />
   </ItemGroup>
   <ItemGroup>
