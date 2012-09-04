@@ -33,12 +33,13 @@
             }
         });
         $("#add").click(function() {
-            //var id = $("#SelectedMechanismid").val();
-            //alert("add link");
-            //.load("/Mechanism/AppendPersonInCharge?id=" + id ,           
+            var id = $("#SelectedMechanismid").val();
+            //alert("add link"+id);
+
             $("#NoteDialog").html("")
                 .dialog("option", "closeOnEscape", false)
-                .load("http://www.baidu.com",
+                //.load("http://www.baidu.com",
+            .load("/Mechanism/CreateContract?id=" + id ,                               
                     function() { $("#NoteDialog").dialog("open"); });
         });
     });

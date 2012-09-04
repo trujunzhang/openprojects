@@ -71,10 +71,12 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainPageController.cs" />
     <Compile Include="Controllers\MechanismController.cs" />
+    <Compile Include="Controllers\SharedController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\MechanismByDepartModel.cs" />
     <Compile Include="Models\MechanismDetailModel.cs" />
     <Compile Include="Models\PagedViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -262,9 +264,11 @@
     <None Include="Views\MainPage\Index.cshtml" />
     <None Include="Views\MainPage\LeftMenu.cshtml" />
     <None Include="Views\Mechanism\ContractViewer.cshtml" />
+    <None Include="Views\Mechanism\CreateContract.cshtml" />
     <None Include="Views\Mechanism\Details.cshtml" />
     <None Include="Views\Mechanism\List.cshtml" />
     <None Include="Views\Mechanism\ModelViewer.cshtml" />
+    <None Include="Views\Shared\MechanismByDepartment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

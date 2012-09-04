@@ -80,5 +80,15 @@ namespace HRMvcApplication.Controllers
         }
 
         #endregion
+
+        #region
+
+        public ActionResult CreateContract(string id)
+        {
+            var viewModel = new MechanismDetailModel(int.Parse(id));
+            return View(viewModel);
+        }
+
+        #endregion
     }
 }
