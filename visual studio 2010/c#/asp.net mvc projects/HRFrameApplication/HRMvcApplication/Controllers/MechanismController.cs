@@ -97,7 +97,7 @@ namespace HRMvcApplication.Controllers
         {
             string id = "28";
             var viewModel = new MechanismDetailModel(int.Parse(id));
-            return PartialView("TwoList",viewModel);
+            return View(viewModel);
         }
  
         #endregion

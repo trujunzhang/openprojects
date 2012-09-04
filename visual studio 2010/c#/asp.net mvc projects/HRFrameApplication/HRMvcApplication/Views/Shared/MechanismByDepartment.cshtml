@@ -17,14 +17,13 @@
 
 <script language="javascript">
 
-    function dropdownchange(value) {
-
+    function dropdownchange() {
         $("form").submit();
     }    
 </script>
 
-<div >
-    @using (Html.BeginForm("MechanismByDepartment","Shared",new{id="wanghao"}))
+<div style="width: 100%;height: 30px;">
+    @using (Html.BeginForm("MechanismByDepartment","Shared"))
     {
         <div style="float: left;">
             机构:
