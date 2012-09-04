@@ -85,8 +85,16 @@ namespace HRMvcApplication.Controllers
 
         public ActionResult CreateContract(string id)
         {
+            var viewModel = new MechanismDetailModel(int.Parse("28"));
 
-            return PartialView("CreateContract");
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult CreateContract(MechanismDetailModel last)
+        {
+            var viewModel = new MechanismDetailModel(int.Parse("28"));
+            return View(viewModel);
         }
 
         #endregion
@@ -99,8 +107,15 @@ namespace HRMvcApplication.Controllers
             var viewModel = new MechanismDetailModel(int.Parse(id));
             return View(viewModel);
         }
- 
-        #endregion
 
+        [HttpPost]
+        public ActionResult TwoList(MechanismDetailModel last)
+        {
+            var viewModel = new MechanismDetailModel(int.Parse("28"));
+
+            return View(viewModel);
+        }
+
+        #endregion
     }
 }
